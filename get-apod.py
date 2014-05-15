@@ -64,7 +64,7 @@ def remove_html(text):
 def find_title_and_explanation(text):
     """ This function tries to find the title and explanation of the picture """
     #print text
-    match=re.search(r'<center>\n<b>(.*)</b> <br> \n',text)
+    match=re.search(r'<center>\s*<b>(.*)</b> <br>',text)
     if match:
         title=match.group(1)
     else:
